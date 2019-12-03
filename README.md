@@ -4,6 +4,16 @@
 
 The contract is composited by a `entry.c` file and a rust static library that actually implement the contract, check Makefile to see how to build the contract.
 
-Use `make test` to compile and run, try modify the contract youself.
+-----------------
 
 > I'm failed to directly build a Rust binary that works on ckb-vm, However if you succeed to build a binary please send me a PR or open an issue!
+
+## Usage
+
+Add riscv target:
+
+``` sh
+rustup target add riscv64imac-unknown-none-elf
+```
+
+Use `make test` to compile and run, try modify the contract youself.
