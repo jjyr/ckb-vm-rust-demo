@@ -1,0 +1,3 @@
+[submodule "ckb-vm"]
+	path = ckb-vm
+	url = https://github.com/nervosnetwork/ckb-vm.git

@@ -1,0 +1,4 @@
+/target
+rust-contract/target
+**/*.rs.bk
+*.out
