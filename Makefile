@@ -17,7 +17,7 @@ rust_contract: $C/src/lib.rs
 	cd $C && cargo build --release
 
 contracts: $C/entry.c
-	$(CC) $< $C/target/riscv64imac-unknown-none-elf/release/librust_contract.a && $(STRIP) a.out
+	$(CC) $(CFLAGS) $(LDFLAGS) $< $C/target/riscv64imac-unknown-none-elf/release/librust_contract.a && $(STRIP) a.out
 
 contracts-via-docker: rust_contract
 	docker run --rm -v `pwd`:/code ${BUILDER_DOCKER} bash -c "cd /code && make contracts"
